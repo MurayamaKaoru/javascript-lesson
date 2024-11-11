@@ -109,11 +109,15 @@ calc.divide(25, 5);
 //2 つの引数 x, y を受け取り、x を y で割った剰余を返り値とする関数 remainder を定義し、5 と 3 を引数に渡して実行した返り値を用いて文字列連結で以下のようにコンソールに出力してください。
 //5 を 3 で割った余りは 2 です。
 function remainder(x, y) {
-  return  [x, y, x % y];
+  return  {
+    paramOne: x,
+    paramTwo: y,
+    return: x % y
+  };
 };
 
 let result = remainder(5, 3);
-console.log(result[0] + ' を ' + result[1] + ' で割った余りは ' + result[2] + ' です。');
+console.log(result.paramOne + ' を ' + result.paramTwo + ' で割った余りは ' + result.return + ' です。');
 
 //Q10 スコープ
 //下記の console.log(x); においてコンソールに 1 が出力されることはなく、x is not defined（変数 x が定義されていない）というエラーが出力されます。
