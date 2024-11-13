@@ -46,9 +46,12 @@ console.log(playerList[1].favorites[1])
 
 //Q5 四則演算
 //Q4 で定義した変数 playerList を使用し、John, Bob, Michael の年齢の平均値を計算した結果をコンソールに出力してください。
-let division = playerList[0].age + playerList[1].age + playerList[2].age;
+let division = 0
+for(i = 0; i <= playerList.length - 1; i++) {
+  division = division + playerList[i].age;
+}
 
-console.log(division/3)
+console.log(division/playerList.length)
 
 //Q6 関数
 //Hello とコンソールに出力する関数 sayHello を定義し、実行してください。
@@ -189,7 +192,7 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 //Number であり偶数の時は even
 //Number であり奇数の時は odd
 //Number 以外の時は not number
-for(let i = 0; i<=6; i++) {
+for(let i = 0; i<=mixed.length; i++) {
   if(typeof mixed[i] !== 'number'){
     console.log('not number');
   }else if(mixed[i] % 2 === 0){
